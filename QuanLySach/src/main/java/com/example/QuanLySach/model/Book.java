@@ -20,6 +20,7 @@ public class Book {
     @Size(max = 100, message = "Tác giả không được vượt quá 100 ký tự")
     private String tentg;
 
+    private String image;
     @NotNull(message = "Giá không được để trống")
     @Min(value = 0, message = "Giá phải là một số không âm")
     private Double price;
