@@ -68,8 +68,8 @@ public class BookController {
         // Tìm ID cuốn sách để update
         for (Book book : listBook) {
             if (book.getId() == id) {
-                book.setTitle(updatedBook.getTitle());
-                book.setAuthor(updatedBook.getAuthor());
+                book.setTieude(updatedBook.getTieude());
+                book.setTentg(updatedBook.getTentg());
                 book.setPrice(updatedBook.getPrice());
                 book.setCategory(updatedBook.getCategory());
                 break;

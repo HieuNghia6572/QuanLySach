@@ -14,11 +14,11 @@ public class Book {
 
     @NotBlank(message = "Tiêu đề không được để trống")
     @Size(max = 100, message = "Tiêu đề không được vượt quá 100 ký tự")
-    private String title;
+    private String tieude;
 
     @NotBlank(message = "Tác giả không được để trống")
     @Size(max = 100, message = "Tác giả không được vượt quá 100 ký tự")
-    private String author;
+    private String tentg;
 
     @NotNull(message = "Giá không được để trống")
     @Min(value = 0, message = "Giá phải là một số không âm")
