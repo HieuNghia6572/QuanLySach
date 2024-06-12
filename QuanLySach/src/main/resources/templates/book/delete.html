@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Xóa sách</title>
+</head>
+<body>
+<h1>Xóa sách</h1>
+<p>Bạn có chắc chắn muốn xóa cuốn sách sau không?</p>
+<table>
+  <tr>
+    <td>Title:</td>
+    <td th:text="${book.title}"></td>
+  </tr>
+  <tr>
+    <td>Author:</td>
+    <td th:text="${book.author}"></td>
+  </tr>
+  <tr>
+    <td>ISBN:</td>
+    <td th:text="${book.isbn}"></td>
+  </tr>
+</table>
+<form th:action="@{/books/delete/{id}(id=${book.id})}" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <button type="submit">Delete</button>
+</form>
+<a th:href="@{/books}">Cancel</a>
+</body>
+</html>
