@@ -16,8 +16,8 @@ public class AppConfig {
         List<Book> listBooks = new ArrayList<>();
         Book book3 = Book.builder()
                 .id(3)
-                .title("Effective Java")
-                .author("Joshua Bloch")
+                .tieude("Effective Java")
+                .tentg("Joshua Bloch")
                 .price(45.0)
                 .category("Programming")
                 .build();
