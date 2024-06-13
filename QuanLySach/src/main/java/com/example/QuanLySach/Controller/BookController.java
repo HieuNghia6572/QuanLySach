@@ -78,9 +78,9 @@ public class BookController {
         // Redirect to the list of books after editing
         return "redirect:/";
     }
-    /*@GetMapping("/delete/{id}")
-    public String deleteBook(@PathVariable("id") Long id) {
-        listBook.deletebook(id);
-        return "redirect:/categories";
-    }*/
+    @GetMapping("/delete/{id}")
+    public String deleteBook(@PathVariable("id") long id){
+        listBook.removeIf(p->p.getId()==id);
+        return "redirect:/";
+    }
 }
